@@ -6,7 +6,7 @@ import logging
 import json
 
 
-# logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.DEBUG)
 
 # To consume messages
 CONSUMER = KafkaConsumer(client_id='my_client',
@@ -18,15 +18,15 @@ CONSUMER = KafkaConsumer(client_id='my_client',
                          consumer_timeout_ms=10000,
                          value_deserializer=json.loads)
 
-SCHEMA_PATH = "JobKafkaMessage.avsc"
-SCHEMA = avro.schema.Parse(open(SCHEMA_PATH).read())
+# SCHEMA_PATH = "JobKafkaMessage.avsc"
+# SCHEMA = avro.schema.Parse(open(SCHEMA_PATH).read())
 
 # print(CONSUMER.assign([0, 1, 2]))
 print(CONSUMER.subscribe(["job_entity"]))
 
-# for msg in CONSUMER:
-#     print("printing")
-#     print(msg.value)
+for msg in CONSUMER:
+    print("printing")
+    print(msg.value)
 try:
     running = True
     # print(SCHEMA_PATH)
@@ -37,12 +37,12 @@ try:
         print("post polling")
         if msg is None:
             print("None")
-        # print(msg)
+        print(msg)
 finally:
         # Close down consumer to commit final offsets.
     print("closing")
     CONSUMER.close()
-
+##
 # for msg in CONSUMER:
 #     print("printing")
 #     print(msg.value)
