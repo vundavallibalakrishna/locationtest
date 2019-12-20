@@ -1,0 +1,111 @@
+{
+    "properties": {
+        "area": {
+            "type": "text",
+            "fields": {
+                "autocomplete": {
+                    "type": "text",
+                    "analyzer": "autocomplete_analyzer",
+                    "search_analyzer": "standard"
+                },
+                "verbatim": {
+                    "type": "keyword"
+                }
+            }
+        },
+        "city": {
+            "type": "text",
+            "fields": {
+                "autocomplete": {
+                    "type": "text",
+                    "analyzer": "autocomplete_analyzer",
+                    "search_analyzer": "standard"
+                },
+                "verbatim": {
+                    "type": "keyword"
+                }
+            }
+        },
+        "state": {
+            "type": "text",
+            "fields": {
+                "autocomplete": {
+                    "type": "text",
+                    "analyzer": "autocomplete_analyzer",
+                    "search_analyzer": "standard"
+                },
+                "verbatim": {
+                    "type": "keyword"
+                }
+            }
+        },
+        "stateCode": {
+            "type": "text",
+            "fields": {
+                "autocomplete": {
+                    "type": "text",
+                    "analyzer": "autocomplete_analyzer",
+                    "search_analyzer": "standard"
+                },
+                "verbatim": {
+                    "type": "keyword"
+                }
+            }
+        },
+        "country": {
+            "type": "text",
+            "fields": {
+                "autocomplete": {
+                    "type": "text",
+                    "analyzer": "autocomplete_analyzer",
+                    "search_analyzer": "standard"
+                },
+                "verbatim": {
+                    "type": "keyword"
+                }
+            }
+        },
+        "countryCode": {
+            "type": "text",
+            "fields": {
+                "autocomplete": {
+                    "type": "text",
+                    "analyzer": "autocomplete_analyzer",
+                    "search_analyzer": "standard"
+                },
+                "verbatim": {
+                    "type": "keyword"
+                }
+            }
+        },
+        "continent": {
+            "type": "text",
+            "fields": {
+                "autocomplete": {
+                    "type": "text",
+                    "analyzer": "autocomplete_analyzer",
+                    "search_analyzer": "standard"
+                },
+                "verbatim": {
+                    "type": "keyword"
+                }
+            }
+        },
+        "continentCode": {
+            "type": "text",
+            "fields": {
+                "autocomplete": {
+                    "type": "text",
+                    "analyzer": "autocomplete_analyzer",
+                    "search_analyzer": "standard"
+                },
+                "verbatim": {
+                    "type": "keyword"
+                }
+            }
+        },
+        "point": {
+            "type": "geo_point"
+        }
+    }
+}
